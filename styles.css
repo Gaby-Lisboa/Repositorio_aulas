@@ -1,0 +1,49 @@
+body {
+    background: linear-gradient(90deg, #8c52ff, #5ce1e6);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    padding-top: 70px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.container {
+    width: 100%;
+    margin-top: 10%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+hr{
+    color: black;
+}
+
+
+
+.container h2,
+.container h1,
+.container p {
+    color: black; 
+}
+
+.carousel-item h5 {
+    font-size: 1.5rem;
+}
+
+.carousel-item p {
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #5ce1e6;
+    border-color: #5ce1e6;
+}
+
+.btn-primary:hover {
+    background-color: #8c52ff;
+    border-color: #8c52ff;
+}
+
