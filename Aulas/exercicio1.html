@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <script>
+        var opcao = Number(window.prompt(
+            "Escolha um exercício:\n" +
+            "[1]  Calcular a diferença entre dois números\n" +
+            "[2] Verificar se um número é par\n" +
+            "[3] Verificar se o primeiro número é múltiplo do segundo\n" +
+            "[4] Converter Celsius para Fahrenheit\n" +
+            "[5] Calcular a área (base * altura)"
+        ));
+
+
+        switch(opcao) {
+            case 1:
+                var num1 = Number(window.prompt("Digite o 1° número"));
+                var num2 = Number(window.prompt("Digite o 2° número"));
+                var diferenca = num1 - num2;
+                document.write(`A diferença entre ${num1} e ${num2} é de ${diferenca}`);
+                break;
+
+            case 2:
+                var num = Number(window.prompt("Digite um número"));
+                if (num % 2 === 0) {
+                    document.write(`O número ${num} é par`);
+                } else {
+                    document.write(`O número ${num} é ímpar`);
+                }
+                break;
+
+            case 3:
+                var nota1 = Number(window.prompt("Digite o 1° número"));
+                var nota2 = Number(window.prompt("Digite o 2° número"));
+                if (nota1 % nota2 === 0) {
+                    document.write(`${nota1} é múltiplo de ${nota2}`);
+                } else {
+                    document.write(`${nota1} não é múltiplo de ${nota2}`);
+                }
+                break;
+
+            case 4:
+                var celsius = Number(window.prompt("Digite a temperatura em Celsius"));
+                var fahrenheit = (celsius * 9/5) + 32;
+                document.write(`${celsius}°C é equivalente a ${fahrenheit}°F`);
+                break;
+
+            case 5:
+                var base = Number(window.prompt("Digite o valor da base"));
+                var altura = Number(window.prompt("Digite o valor da altura"));
+                var area = base * altura;
+                document.write(`A área do retângulo com base ${base} e altura ${altura} é ${area}`);
+                break;
+
+            default:
+                document.write("Opção inválida! Por favor, escolha uma opção entre 1 e 5");
+        }
+    </script>
+</body>
+</html>

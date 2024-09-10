@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando Texto</title>
+</head>
+<body>
+    <p id="text">Melhor Aula</p>
+    <button id="button">Clique</button>
+
+    <script>
+        var cont = 0
+        document.getElementById("button").addEventListener
+        ("click", function(){
+
+            if(cont % 2 == 0){
+                document.getElementById("text").innerText =
+                "JavaScript com DOM"
+            }else{
+                document.getElementById("text").innerText =
+                "Melhor Aula"
+            }
+            
+            cont++
+
+        })
+    </script>
+</body>
+</html>

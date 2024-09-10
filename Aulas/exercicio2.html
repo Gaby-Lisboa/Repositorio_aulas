@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <script>
+        var opcao = Number(window.prompt(
+            "Escolha um exercício:\n" +
+            "[1] Verificar se as notas estão acima da média e se são pares\n" +
+            "[2] Calcular o IMC\n" +
+            "[3] Verificar se um ano é bissexto\n" +
+            "[4] Converter valor com taxa de câmbio"
+        ));
+
+        switch(opcao) {
+            case 1:
+                var nota1 = Number(window.prompt("Digite a 1ª nota"));
+                var nota2 = Number(window.prompt("Digite a 2ª nota"));
+                var media = (nota1 + nota2) / 2;
+                
+                var resultado1 = `A média das notas é ${media} `;
+                if (media >= 6) {
+                    resultado1 += "Você está acima da média ";
+                } else {
+                    resultado1 += "Você está abaixo da média ";
+                }
+
+                if (nota1 % 2 === 0) {
+                    resultado1 += `A nota 1 (${nota1}) é par `;
+                } else {
+                    resultado1 += `A nota 1 (${nota1}) é ímpar `;
+                }
+
+                if (nota2 % 2 === 0) {
+                    resultado1 += `A nota 2 (${nota2}) é par `;
+                } else {
+                    resultado1 += `A nota 2 (${nota2}) é ímpar `;
+                }
+
+                document.write(resultado1);
+                break;
+
+            case 2:
+                var peso = Number(window.prompt("Digite o peso em kg"));
+                var altura = Number(window.prompt("Digite a altura em metros"));
+                var imc = peso / (altura * altura);
+                document.write(`O IMC para peso ${peso} kg e altura ${altura} m é ${imc.toFixed(2)}`);
+                break;
+
+            case 3:
+                var ano = Number(window.prompt("Digite o ano"));
+                var bissexto = (ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0);
+                if (bissexto) {
+                    document.write(`O ano ${ano} é bissexto`);
+                } else {
+                    document.write(`O ano ${ano} não é bissexto`);
+                }
+                break;
+
+            case 4:
+                var taxa = Number(window.prompt("Digite a taxa de câmbio"));
+                var valor = Number(window.prompt("Digite o valor a ser convertido"));
+                var convertido = valor * taxa;
+                document.write(`O valor de ${valor} convertido com a taxa de câmbio ${taxa} é ${convertido}`);
+                break;
+
+            default:
+                document.write("Opção inválida! Por favor, escolha uma opção entre 1 e 4");
+        }
+    </script>
+</body>
+</html>

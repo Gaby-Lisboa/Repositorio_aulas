@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+</head>
+<body>
+    <script>
+        var opcao = Number(window.prompt(
+            "Escolha um exercício:\n" +
+            "[1] Tabuada de um número\n" +
+            "[2] Jogo de Pedra, Papel e Tesoura\n" +
+            "[3] Calcular o fatorial de um número"
+        ));
+
+        switch(opcao) {
+            case 1:
+                var numero = Number(window.prompt("Digite um número de 1 a 9"));
+                
+                if (numero >= 1 && numero <= 9) {
+                    var resultado = `Tabuada do ${numero}:\n`;
+                    for (var i = 1; i <= 10; i++) {
+                        resultado += `${numero} x ${i} = ${numero * i}\n`;
+                    }
+                    alert(resultado);
+                } else {
+                    alert("Por favor, insira um número válido entre 1 e 9.");
+                }
+                break;
+
+            case 2:
+                var opcoes = ["pedra", "papel", "tesoura"];
+                var escolhaComputador = opcoes[Math.floor(Math.random() * 3)];
+
+                var resultado2 = "Você escolheu: pedra\n";
+                resultado2 += `O computador escolheu: ${escolhaComputador}\n`;
+
+                if (escolhaComputador === "pedra") {
+                    resultado2 += "Empate!";
+                } else if (escolhaComputador === "papel") {
+                    resultado2 += "Você perdeu! Papel cobre Pedra.";
+                } else {
+                    resultado2 += "Você ganhou! Pedra quebra Tesoura.";
+                }
+
+                alert(resultado2);
+                break;
+
+            case 3:
+                var numeroFatorial = Number(window.prompt("Digite um número para calcular o fatorial"));
+                var fatorial = 1;
+
+                for (var i = 1; i <= numeroFatorial; i++) {
+                    fatorial *= i;
+                }
+
+                alert(`O fatorial de ${numeroFatorial} é ${fatorial}`);
+                break;
+
+            default:
+                alert("Opção inválida! Por favor, escolha uma opção entre 1 e 3");
+        }
+    </script>
+</body>
+</html>
