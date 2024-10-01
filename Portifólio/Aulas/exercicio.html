@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de JavaScript</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .code {
+            background-color: #1e1e1e;
+            padding: 10px;
+            border-radius: 5px;
+            color: #88aeff;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: auto; /* Permite rolagem caso o código exceda o tamanho do contêiner */
+        }
+        .result {
+            padding: 10px;
+            border-radius: 5px;
+            color: #3a3a3a;
+            margin-top: 10px;
+            font-size: 1.7rem;
+        }
+        
+        h5{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Exercícios de JavaScript</h1>
+
+        <!-- Exercício 1 -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2>Exercício 1: Diferença entre dois números</h2>
+                <input type="number" id="num1_1" placeholder="Digite o 1° número" class="form-control mb-2">
+                <input type="number" id="num2_1" placeholder="Digite o 2° número" class="form-control mb-2">
+                <button class="btn btn-primary" onclick="exercicio1()">Calcular Diferença</button>
+                <div class="result" id="result1"></div>
+                <div class="code">
+                <h5>//comentário</h5>
+                var num1 = Number(document.getElementById("num1_1").value);<br>
+                var num2 = Number(document.getElementById("num2_1").value);<br>
+                var diferenca = num1 - num2;<br>
+                document.getElementById("result1").innerText = `A diferença entre ${num1} e ${num2} é de ${diferenca}`;<br>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercício 2 -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2>Exercício 2: Verificar se um número é par</h2>
+                <input type="number" id="num2" placeholder="Digite um número" class="form-control mb-2">
+                <button class="btn btn-primary" onclick="exercicio2()">Verificar Par</button>
+                <div class="result" id="result2"></div>
+                <div class="code">
+                var num = Number(document.getElementById("num2").value);<br>
+                if (num % 2 === 0) {<br>
+                    document.getElementById("result2").innerText = `O número ${num} é par`;<br>
+                } else {<br>
+                    document.getElementById("result2").innerText = `O número ${num} é ímpar`;<br>
+                }<br>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercício 3 -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2>Exercício 3: Múltiplo do Segundo Número</h2>
+                <input type="number" id="num1_3" placeholder="Digite o 1° número" class="form-control mb-2">
+                <input type="number" id="num2_3" placeholder="Digite o 2° número" class="form-control mb-2">
+                <button class="btn btn-primary" onclick="exercicio3()">Verificar Múltiplo</button>
+                <div class="result" id="result3"></div>
+                <div class="code">
+       
+var nota1 = Number(document.getElementById("num1_3").value);<br>
+var nota2 = Number(document.getElementById("num2_3").value);<br>
+if (nota1 % nota2 === 0) {<br>
+    document.getElementById("result3").innerText = `${nota1} é múltiplo de ${nota2}`;<br>
+} else {<br>
+    document.getElementById("result3").innerText = `${nota1} não é múltiplo de ${nota2}`;<br>
+}<br>
+            
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercício 4 -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2>Exercício 4: Converter Celsius para Fahrenheit</h2>
+                <input type="number" id="celsius" placeholder="Digite a temperatura em Celsius" class="form-control mb-2">
+                <button class="btn btn-primary" onclick="exercicio4()">Converter</button>
+                <div class="result" id="result4"></div>
+                <div class="code">
+                    
+var celsius = Number(document.getElementById("celsius").value);<br>
+var fahrenheit = (celsius * 9/5) + 32;<br>
+document.getElementById("result4").innerText = `${celsius}°C é equivalente a ${fahrenheit}°F`;<br>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercício 5 -->
+        <div class="card mb-3">
+            <div class="card-body">
+                <h2>Exercício 5: Calcular a Área</h2>
+                <input type="number" id="base" placeholder="Digite a base" class="form-control mb-2">
+                <input type="number" id="altura" placeholder="Digite a altura" class="form-control mb-2">
+                <button class="btn btn-primary" onclick="exercicio5()">Calcular Área</button>
+                <div class="result" id="result5"></div>
+                <div class="code">
+                 
+var base = Number(document.getElementById("base").value);<br>
+var altura = Number(document.getElementById("altura").value);<br>
+var area = base * altura;<br>
+document.getElementById("result5").innerText = `A área do retângulo com base ${base} e altura ${altura} é ${area}`;<br>
+                
+                </div>
+            </div>
+        </div>
+
+        <!-- Adicione outros exercícios aqui seguindo o mesmo padrão... -->
+
+    </div>
+
+    <script>
+        function exercicio1() {
+            var num1 = Number(document.getElementById("num1_1").value);
+            var num2 = Number(document.getElementById("num2_1").value);
+            var diferenca = num1 - num2;
+            document.getElementById("result1").innerText = `A diferença entre ${num1} e ${num2} é de ${diferenca}`;
+        }
+
+        function exercicio2() {
+            var num = Number(document.getElementById("num2").value);
+            if (num % 2 === 0) {
+                document.getElementById("result2").innerText = `O número ${num} é par`;
+            } else {
+                document.getElementById("result2").innerText = `O número ${num} é ímpar`;
+            }
+        }
+
+        function exercicio3() {
+            var nota1 = Number(document.getElementById("num1_3").value);
+            var nota2 = Number(document.getElementById("num2_3").value);
+            if (nota1 % nota2 === 0) {
+                document.getElementById("result3").innerText = `${nota1} é múltiplo de ${nota2}`;
+            } else {
+                document.getElementById("result3").innerText = `${nota1} não é múltiplo de ${nota2}`;
+            }
+        }
+
+        function exercicio4() {
+            var celsius = Number(document.getElementById("celsius").value);
+            var fahrenheit = (celsius * 9/5) + 32;
+            document.getElementById("result4").innerText = `${celsius}°C é equivalente a ${fahrenheit}°F`;
+        }
+
+        function exercicio5() {
+            var base = Number(document.getElementById("base").value);
+            var altura = Number(document.getElementById("altura").value);
+            var area = base * altura;
+            document.getElementById("result5").innerText = `A área do retângulo com base ${base} e altura ${altura} é ${area}`;
+        }
+    </script>
+</body>
+</html>

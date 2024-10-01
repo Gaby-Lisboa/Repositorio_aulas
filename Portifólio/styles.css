@@ -1,0 +1,131 @@
+body {
+    background: linear-gradient(90deg, #8c52ff, #5ce1e6);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    padding-top: 70px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    padding: 10px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.navbar-nav {
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px; 
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+    display: block;
+    border: none;
+}
+
+.navbar-collapse.collapse {
+    display: none !important;
+}
+
+.navbar-collapse.show {
+    display: block !important;
+}
+
+
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.container {
+    width: 100%;
+    margin-top: 10%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+hr{
+    color: black;
+}
+
+
+
+.container h2,
+.container h1,
+.container p {
+    color: black; 
+}
+
+.carousel-item h5 {
+    font-size: 1.5rem;
+}
+
+.carousel-item p {
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #5ce1e6;
+    border-color: #5ce1e6;
+}
+
+
+.btn-primary:hover {
+    background-color: #8c52ff;
+    border-color: #8c52ff;
+}
+
+.btn-ver-mais {
+    font-size: 1rem;       
+    font-weight: bold;
+    padding: 10px 20px;     
+    margin-top: 20px; 
+    margin-left: 3%;     
+    display: inline-block;  
+    width: auto;            
+}
+
+.aula-data {
+    font-size: 1rem;                 /* Tamanho da fonte um pouco menor */
+    color: #888888;                    /* Cor mais suave e discreta */
+    margin-top: 5px;                   /* Pequeno espaçamento superior */
+    display: block;                    /* Exibe como bloco, alinhando automaticamente */
+    font-style: italic;                /* Itálico para diferenciar da fonte normal */
+}
+
+@media (max-width: 768px) {
+    .btn-ver-mais {
+        width: 100%;       
+        text-align: center; 
+        margin-left: 0;
+    }
+}
+
