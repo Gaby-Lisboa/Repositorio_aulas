@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3: Document Object Model (DOM)</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        p {
+            font-size: 1.25rem; 
+        }
+        h2 {
+            font-size: 1.5rem; 
+            margin-top: 1.5rem; 
+        }
+        ul {
+            color: black;
+            font-size: 1.25rem; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Aula 3: Document Object Model (DOM)</h1>
+        <div class="card">
+            <img src="../imagens/img_aula4.png" class="card-img-top" alt="Imagem da Aula 4">
+            <div class="card-body">
+                <h2>O que é o DOM?</h2>
+                <p>O DOM (Document Object Model) é uma interface de programação que permite que linguagens como JavaScript acessem e manipulem a estrutura de documentos HTML e XML como uma árvore de nós. Cada elemento, atributo e texto dentro do documento é representado como um nó, permitindo que programadores acessem e manipulem o conteúdo, a estrutura e o estilo da página da web de forma dinâmica.</p>
+
+                <h2>Estrutura do DOM</h2>
+                <p>A estrutura do DOM é baseada em uma hierarquia de nós, incluindo:</p>
+                <ul>
+                    <li><strong>Node</strong>: A unidade básica que representa cada parte do documento.</li>
+                    <li><strong>Document Node</strong>: Representa o documento inteiro.</li>
+                    <li><strong>Element Nodes</strong>: Representam elementos HTML.</li>
+                    <li><strong>Text Nodes</strong>: Representam o texto dentro dos elementos.</li>
+                    <li><strong>Attribute Nodes</strong>: Representam os atributos de um elemento.</li>
+                </ul>
+
+                <h2>Manipulação do DOM com JavaScript</h2>
+                <p>Com JavaScript, você pode acessar e manipular o DOM usando vários métodos disponíveis no objeto <code>document</code>. Alguns dos principais métodos são:</p>
+                <ul>
+                    <li><code>document.getElementById(id)</code>: Acessa um elemento pelo seu atributo id.</li>
+                    <li><code>document.getElementsByClassName(className)</code>: Acessa elementos pelo nome da classe.</li>
+                    <li><code>document.querySelector(selector)</code>: Acessa o primeiro elemento que corresponde a um seletor CSS.</li>
+                </ul>
+
+                <h2>Eventos e Manipulação do DOM</h2>
+                <p>Eventos permitem a interação do usuário com a página. Com o DOM, você pode manipular eventos para criar interações dinâmicas, usando <code>element.addEventListener(event, function)</code> para adicionar manipuladores de eventos.</p>
+
+                <h2>Vantagens do DOM</h2>
+                <ul>
+                    <li>Interatividade: Permite criar experiências de usuário dinâmicas.</li>
+                    <li>Manipulação em Tempo Real: Alterações podem ser feitas sem recarregar a página.</li>
+                    <li>Facilidade de Acesso: A estrutura hierárquica torna fácil localizar e modificar elementos específicos.</li>
+                </ul>
+
+                <a href="../index.html" class="btn btn-primary">Voltar ao Portfólio</a>
+                <a href="../pdf_aulas/aula4_DOM.pdf" class="btn btn-primary" download>Baixar PDF da Aula</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

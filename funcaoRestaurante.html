@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Restaurante da FER</title>
+</head>
+<body>
+    <div class="conteiner">
+        <h1>Bem vindo ao Restaurante</h1>
+        <div class="menu">
+            <label>Escolha seu Prato:</label>
+            <select id="prato">
+                <option value="0">Selecione seu prato</option>
+                <option value="35">Parmediana R$35,00</option>
+                <option value="20">Macarrão c carne R$20,00</option>
+                <option value="35">Lasanha R$35,00</option>
+                <option value="40">Raviolli com molho branco R$40,00</option>
+            </select>
+
+            <div class="quantidade">
+                <label>Quantidade</label>
+                <input type="number" id="quantidade" min="1" max="30" required>
+            </div>
+        </div>
+
+            <button onclick="calcularTotal()">Calcular Total</button>
+            <p id="resultado"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
